@@ -1,3 +1,15 @@
-<ul>
+<!-- <ul>
   <li *ngFor="let location of locations">{{location.name}}</li>
-</ul>
+</ul> -->
+<agm-map [latitude]="mapLat" [longitude]="mapLng" [zoom]="14">  
+    <div *ngFor="let location of locations" >
+      <agm-marker [latitude]="location.lat" [longitude]="location.lng" [openInfoWindow]="true">
+        <agm-info-window>
+          <div>
+            <h3>{{location.name}}</h3>
+            Is Open: {{location.open}}
+          </div>
+        </agm-info-window>
+      </agm-marker>
+    </div>
+  </agm-map> 

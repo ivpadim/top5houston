@@ -8,8 +8,12 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 })
 
 export class MapComponent implements OnInit {
+  //Focus the map to this area
+  mapLat = 29.75;
+  mapLng = -95.36;
   //Array of locations fetched from firebase
   locations: any[];
+  
   constructor( public af: AngularFireDatabase) {
     //Subscribe to value changes
     af.list('locations').valueChanges().subscribe(items => {

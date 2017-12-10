@@ -5,6 +5,7 @@
 
 export const environment = {
   production: false,
+  agmApiKey: "AIzaSyA-seBqhgu-xKRynZRvUatrPPAmWQBZ2ng",
   firebase: {
     apiKey: "AIzaSyDZOXIdLKhGxaoMcoGtzxDzL5CWC9m-CGM",
     authDomain: "livetracking-d8327.firebaseapp.com",

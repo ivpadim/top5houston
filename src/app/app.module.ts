@@ -3,9 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
-import { AppComponent } from './components/app.component';
+import { AgmCoreModule } from '@agm/core';
+
 import { environment } from '../environments/environment';
+import { AppComponent } from './components/app.component';
 import { MapComponent } from './components/map/map.component';
+
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { MapComponent } from './components/map/map.component';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AgmCoreModule.forRoot({
+      apiKey: environment.agmApiKey
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
