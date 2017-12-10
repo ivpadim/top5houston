@@ -13,7 +13,7 @@ export class MapComponent implements OnInit {
   mapLng = -95.36;
   //Array of locations fetched from firebase
   locations: any[];
-  
+
   constructor( public af: AngularFireDatabase) {
     //Subscribe to value changes
     af.list('locations').valueChanges().subscribe(items => {
@@ -22,6 +22,10 @@ export class MapComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  getIconUrl(isOpen) {
+    return isOpen ? "/assets/images/open_marker.png" : "/assets/images/close_marker.png";
   }
 
 }
