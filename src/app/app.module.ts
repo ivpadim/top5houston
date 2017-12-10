@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
-import { AppComponent } from './components/app/app.component';
+import { AppComponent } from './components/app.component';
 import { environment } from '../environments/environment';
 
 
