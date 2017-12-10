@@ -1,11 +1,12 @@
 var firebase = require('firebase');
 
 firebase.initializeApp({
-    authDomain: "livetracking-d8327.firebaseapp.com",
-    databaseURL: "https://livetracking-d8327.firebaseio.com",
-    projectId: "livetracking-d8327",
-    storageBucket: "livetracking-d8327.appspot.com",
-    messagingSenderId: "584303601188"
+    apiKey: "AIzaSyDH5V8zwarkgRtVIBLGQfy5GL7nbLl8TDQ",
+    authDomain: "top5houston.firebaseapp.com",
+    databaseURL: "https://top5houston.firebaseio.com",
+    projectId: "top5houston",
+    storageBucket: "top5houston.appspot.com",
+    messagingSenderId: "957961763408"
 });
 
 var ref = firebase.app().database().ref();
