@@ -1,0 +1,8 @@
+anguage: node_js
+sudo: false
+node_js:
+  - "stable"
+install:
+  - npm install
+script:
+  - webpack
