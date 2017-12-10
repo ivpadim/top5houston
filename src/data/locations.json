@@ -1,0 +1,34 @@
+{
+    "locations" : [ {
+      "lat" : 29.7533,
+      "lng" : -95.35936,
+      "name" : "Discovery Green",
+      "open" : true
+    }, {
+      "lat" : 29.75735,
+      "lng" : -95.35544,
+      "name" : "Minute Maid Park",
+      "open" : true
+    }, {
+      "lat" : 29.7544,
+      "lng" : -95.3651,
+      "name" : "Green Street",
+      "open" : false
+    }, {
+      "lat" : 29.7509,
+      "lng" : -95.362087,
+      "name" : "Toyota Center",
+      "open" : true
+    }, {
+      "lat" : 29.764287,
+      "lng" : -95.367353,
+      "name" : "Aquarium",
+      "open" : false
+    }, {
+      "lat" : 29.752311,
+      "lng" : -95.35223,
+      "name" : "BBVA Stadium",
+      "open" : true
+    } ]
+  }
+  
