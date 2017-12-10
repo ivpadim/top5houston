@@ -1,5 +1,12 @@
+//Helper utility to simulate database changes
 var firebase = require('firebase');
+var colors   = require('colors');
 
+function random (low, high) {
+    return Math.floor(Math.random() * (high - low) + low)
+}
+
+//Firebase connection string
 firebase.initializeApp({
     apiKey: "AIzaSyDH5V8zwarkgRtVIBLGQfy5GL7nbLl8TDQ",
     authDomain: "top5houston.firebaseapp.com",
@@ -12,25 +19,27 @@ firebase.initializeApp({
 var ref = firebase.app().database().ref();
 var locations = ref.child("locations");
 
-
-function random (low, high) {
-    return Math.floor(Math.random() * (high - low) + low)
-}
-
 function updateLocations(){
     locations.once('value', function (snapshot) {
+        //Grab a random location and swap the open value
         var i = 0;
-        var n = random(0, 4);
+        var n = snapshot.numChildren() - 1;
+        var r = random(0, n);
+
         snapshot.forEach(function (snapLocation) {
-            var open = snapLocation.val().open;
-            if(n == i)
+            if(r == i){
+                var location = snapLocation.val();
+                var open = location.open;
                 snapLocation.ref.update({open: !open});
+                console.log(('Updated location ' + location.name).yellow);
+            }
             i++;
         });
     });
 }
 
+//Set a timer every 4s
 setInterval(function(){
     updateLocations();
-}, 3000);
+}, 4000);
 

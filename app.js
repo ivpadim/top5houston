@@ -1,8 +1,11 @@
 'use strict';
-
 var express = require('express'),
      colors = require('colors');
 
+//updates the database every 4s
+require('./firebase.worker');
+
+//middleware for angular app (run webpack)
 var app = express();
 app.use('/', express.static('dist'));
 
