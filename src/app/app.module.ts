@@ -8,7 +8,7 @@ import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
 import { AppComponent } from './components/app.component';
 import { MapComponent } from './components/map/map.component';
-
+import { LocationService } from './services/location.service';
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import { MapComponent } from './components/map/map.component';
       apiKey: environment.agmApiKey
     })
   ],
-  providers: [],
+  providers: [LocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

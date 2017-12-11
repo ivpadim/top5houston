@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { LocationService } from '../../services/location.service';
+import { Location } from '../../models/location';
 
 @Component({
   selector: 'app-map',
@@ -12,16 +13,13 @@ export class MapComponent implements OnInit {
   mapLat = 29.75;
   mapLng = -95.36;
   //Array of locations fetched from firebase
-  locations: any[];
+  locations: Location[];
 
-  constructor( public af: AngularFireDatabase) {
-    //Subscribe to value changes
-    af.list('locations').valueChanges().subscribe(items => {
-      this.locations = items;
-    });
-  }
+  constructor(private service : LocationService) {  }
 
   ngOnInit() {
+    //Subscribe to value changes
+    this.service.getLocations().subscribe(items => this.locations = items);    
   }
 
   getIconUrl(isOpen) {
