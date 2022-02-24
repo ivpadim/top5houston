@@ -58,3 +58,5 @@ You can also start the updater which randomly changes a location status
 2) Once you create your project you can import the seed data located in /src/data/locations.json
 3) Update the firebase config located in /src/environments/environment.ts and /firebase.worker.js
 4) Get a new [AGM key](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key) and update /src/environments/environment.ts
+
+***OLD REPO***
