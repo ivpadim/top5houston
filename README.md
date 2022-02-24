@@ -60,3 +60,4 @@ You can also start the updater which randomly changes a location status
 4) Get a new [AGM key](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key) and update /src/environments/environment.ts
 
 ***OLD REPO***
+Don't clone
