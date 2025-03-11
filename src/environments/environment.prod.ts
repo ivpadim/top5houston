@@ -1,3 +1,3 @@
 export const environment = {
-  production: true
+  REACT_APP_PRODUCTION: true
 };
