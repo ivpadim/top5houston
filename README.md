@@ -23,7 +23,7 @@ tools you may use.
 Having the option to choose any technology we'll use firebase for the backend since it already has realtime updates 
 built-in and is a easy to use tool.
 
-For the frontend we'll stick with the standard: Angular 5 and given that we are using angular we are going to use angular-cli 
+For the frontend we'll stick with the standard: Angular 12 and given that we are using angular we are going to use angular-cli 
 (angular command line interface) and agm (angular google maps) for the map.
 
 We are also going to adopt continuous integration using [travis ci](https://travis-ci.org).
